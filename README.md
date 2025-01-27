@@ -26,5 +26,10 @@ after than  you can run with this command
 ```cmd
 make start or go run server.go
 ```
-
+# Optional
+- you can download and open API spec with POSTMAN Json file.
+## contact
+- linkedIn : [https://www.linkedin.com/in/thaksa-nanan-061661236/](doc:linking-to-pages#anchor-links)
+- phone : 0826975094
+- line with phone number : 0826975094
 
