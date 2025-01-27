@@ -21,7 +21,7 @@ const _ = grpc.SupportPackageIsVersion9
 const (
 	APIService_GetTriangleWithLoop_FullMethodName    = "/api.APIService/GetTriangleWithLoop"
 	APIService_GetTriangleWithNonLoop_FullMethodName = "/api.APIService/GetTriangleWithNonLoop"
-	APIService_CatchMeIfYouCan_FullMethodName        = "/api.APIService/CatchMeIfYouCan"
+	APIService_CatchMeIfYouCan_FullMethodName        = "/api.APIService/catchMeIfYouCan"
 	APIService_GetSummary_FullMethodName             = "/api.APIService/GetSummary"
 )
 
@@ -222,7 +222,7 @@ var APIService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _APIService_GetTriangleWithNonLoop_Handler,
 		},
 		{
-			MethodName: "CatchMeIfYouCan",
+			MethodName: "catchMeIfYouCan",
 			Handler:    _APIService_CatchMeIfYouCan_Handler,
 		},
 		{

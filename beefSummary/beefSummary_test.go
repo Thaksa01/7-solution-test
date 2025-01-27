@@ -1,11 +1,11 @@
-package question3_test
+package beefSummary_test
 
 import (
-	"github.com/thaksananan-01/7-solution-test/question3"
+	"github.com/thaksananan-01/7-solution-test/beefSummary"
 	"testing"
 )
 
-func TestQuestion3(t *testing.T) {
+func TestbeefSummary(t *testing.T) {
 	text1 := "Fatback t-bone t-bone, pastrami  ..   t-bone.  pork, meatloaf jowl enim.  Bresaola t-bone."
 	expected1 := map[string]interface{}{
 		"t-bone":   4,
@@ -17,7 +17,7 @@ func TestQuestion3(t *testing.T) {
 		"enim":     1,
 		"bresaola": 1,
 	}
-	result1 := question3.PieFireDire(text1)
+	result1 := beefSummary.PieFireDire(text1)
 	if !mapsAreEqual(result1, expected1) {
 		t.Errorf("Expected %+v, but got %+v for text1", expected1, result1)
 	}

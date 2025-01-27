@@ -1,4 +1,4 @@
-package question1
+package binaryTree
 
 func TriangleSumValueWithLoop(triangle [][]int) int {
 	dpTriangle := make([][]int, len(triangle))

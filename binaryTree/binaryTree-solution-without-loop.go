@@ -1,4 +1,4 @@
-package question1
+package binaryTree
 
 func TriangleSumValueWithoutLoop(triangle [][]int) int {
 	memo := make(map[[2]int]int)

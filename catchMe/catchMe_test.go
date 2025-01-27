@@ -1,8 +1,8 @@
-package question2_test
+package catchMe_test
 
 import (
 	"reflect"
-	"github.com/thaksananan-01/7-solution-test/question2"
+	"github.com/thaksananan-01/7-solution-test/catchMe"
 	"testing"
 )
 
@@ -11,7 +11,7 @@ type testCase struct {
 	expected  []int
 }
 
-func TestQuestion2(t *testing.T) {
+func TestcatchMe(t *testing.T) {
 	tests := []testCase {
 		{encoded: "L", expected: []int{1, 0}},
 		{encoded: "R", expected: []int{0, 1}},
@@ -24,7 +24,7 @@ func TestQuestion2(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.encoded, func(t *testing.T) {
-			result := question2.DecodeString(test.encoded)
+			result := catchMe.DecodeString(test.encoded)
 			if !reflect.DeepEqual(result, test.expected) {
 				t.Errorf("For encoded=%q, expected %v, but got %v", test.encoded, test.expected, result)
 			}

@@ -9,9 +9,9 @@ import (
     "net/http"
 
     api "github.com/thaksananan-01/7-solution-test/api"
-    "github.com/thaksananan-01/7-solution-test/question1"
-    "github.com/thaksananan-01/7-solution-test/question2"
-    "github.com/thaksananan-01/7-solution-test/question3"
+    "github.com/thaksananan-01/7-solution-test/binaryTree"
+    "github.com/thaksananan-01/7-solution-test/catchMe"
+    "github.com/thaksananan-01/7-solution-test/beefSummary"
     "github.com/thaksananan-01/7-solution-test/utils"
     "github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
     "google.golang.org/grpc"
@@ -35,7 +35,7 @@ func (s *APIServer) GetSummary(ctx context.Context, req *api.SummaryRequest) (*a
     }
 
     text := string(body)
-    processedData := question3.PieFireDire(text)
+    processedData := beefSummary.PieFireDire(text)
 
     result := &api.SummaryResponse{Beef: make(map[string]int32)}
     for key, value := range processedData {
@@ -50,7 +50,7 @@ func (s *APIServer) GetTriangleWithLoop(ctx context.Context, req *api.TriangleRe
     if err != nil {
         return nil, fmt.Errorf("failed to read JSON: %v", err)
     }
-    sum := question1.TriangleSumValueWithLoop(data)
+    sum := binaryTree.TriangleSumValueWithLoop(data)
     return &api.TriangleResponse{Sum: int32(sum)}, nil
 }
 
@@ -59,16 +59,16 @@ func (s *APIServer) GetTriangleWithNonLoop(ctx context.Context, req *api.Triangl
     if err != nil {
         return nil, fmt.Errorf("failed to read JSON: %v", err)
     }
-    sum := question1.TriangleSumValueWithoutLoop(data)
+    sum := binaryTree.TriangleSumValueWithoutLoop(data)
     return &api.TriangleResponse{Sum: int32(sum)}, nil
 }
 
-func (s *APIServer) CatchMeIfYouCan(ctx context.Context, req *api.CatchMeRequest) (*api.CatchMeResponse, error) {
+func (s *APIServer) catchMeIfYouCan(ctx context.Context, req *api.CatchMeRequest) (*api.CatchMeResponse, error) {
     // Extract the single input string
     input := req.Input
 
     // Decode the string
-    decoded := question2.DecodeString(input)
+    decoded := catchMe.DecodeString(input)
 
     // Convert the decoded result to a string (if it returns []int or similar)
     output := fmt.Sprint(decoded)
@@ -82,6 +82,7 @@ func main() {
     if err != nil {
         log.Fatalf("failed to listen: %v", err)
     }
+
     grpcServer := grpc.NewServer()
     api.RegisterAPIServiceServer(grpcServer, &APIServer{})
     reflection.Register(grpcServer)
@@ -100,8 +101,13 @@ func main() {
         log.Fatalf("failed to register gateway: %v", err)
     }
 
+    // Create an HTTP multiplexer
+    httpMux := http.NewServeMux()
+    httpMux.Handle("/", mux)
+
     log.Println("Starting HTTP server on port 8080...")
-    if err := http.ListenAndServe(":8080", mux); err != nil {
+    if err := http.ListenAndServe(":8080", httpMux); err != nil {
         log.Fatalf("failed to serve HTTP: %v", err)
     }
 }
+

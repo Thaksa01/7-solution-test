@@ -38,7 +38,7 @@ service APIService {
   };
   }
 
-  rpc CatchMeIfYouCan(CatchMeRequest) returns (CatchMeResponse) {
+  rpc catchMeIfYouCan(CatchMeRequest) returns (CatchMeResponse) {
     option (google.api.http) = {
       post: "/api/catch-me"
       body: "*"

@@ -125,7 +125,7 @@ func RegisterAPIServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/api.APIService/GetTriangleWithLoop", runtime.WithHTTPPathPattern("/v1/triangle/loop"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/api.APIService/GetTriangleWithLoop", runtime.WithHTTPPathPattern("/api/binary-tree/loop"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -145,7 +145,7 @@ func RegisterAPIServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/api.APIService/GetTriangleWithNonLoop", runtime.WithHTTPPathPattern("/v1/triangle/non-loop"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/api.APIService/GetTriangleWithNonLoop", runtime.WithHTTPPathPattern("/api/binary-tree/without-loop"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -165,7 +165,7 @@ func RegisterAPIServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/api.APIService/CatchMeIfYouCan", runtime.WithHTTPPathPattern("/v1/catch-me"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/api.APIService/CatchMeIfYouCan", runtime.WithHTTPPathPattern("/api/catch-me"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -185,7 +185,7 @@ func RegisterAPIServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/api.APIService/GetSummary", runtime.WithHTTPPathPattern("/v1/summary"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/api.APIService/GetSummary", runtime.WithHTTPPathPattern("/api/summary"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -243,7 +243,7 @@ func RegisterAPIServiceHandlerClient(ctx context.Context, mux *runtime.ServeMux,
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/api.APIService/GetTriangleWithLoop", runtime.WithHTTPPathPattern("/v1/triangle/loop"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/api.APIService/GetTriangleWithLoop", runtime.WithHTTPPathPattern("/api/binary-tree/loop"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -260,7 +260,7 @@ func RegisterAPIServiceHandlerClient(ctx context.Context, mux *runtime.ServeMux,
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/api.APIService/GetTriangleWithNonLoop", runtime.WithHTTPPathPattern("/v1/triangle/non-loop"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/api.APIService/GetTriangleWithNonLoop", runtime.WithHTTPPathPattern("/api/binary-tree/without-loop"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -277,7 +277,7 @@ func RegisterAPIServiceHandlerClient(ctx context.Context, mux *runtime.ServeMux,
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/api.APIService/CatchMeIfYouCan", runtime.WithHTTPPathPattern("/v1/catch-me"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/api.APIService/CatchMeIfYouCan", runtime.WithHTTPPathPattern("/api/catch-me"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -294,7 +294,7 @@ func RegisterAPIServiceHandlerClient(ctx context.Context, mux *runtime.ServeMux,
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/api.APIService/GetSummary", runtime.WithHTTPPathPattern("/v1/summary"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/api.APIService/GetSummary", runtime.WithHTTPPathPattern("/api/summary"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -311,10 +311,10 @@ func RegisterAPIServiceHandlerClient(ctx context.Context, mux *runtime.ServeMux,
 }
 
 var (
-	pattern_APIService_GetTriangleWithLoop_0    = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "triangle", "loop"}, ""))
-	pattern_APIService_GetTriangleWithNonLoop_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "triangle", "non-loop"}, ""))
-	pattern_APIService_CatchMeIfYouCan_0        = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "catch-me"}, ""))
-	pattern_APIService_GetSummary_0             = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "summary"}, ""))
+	pattern_APIService_GetTriangleWithLoop_0    = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"api", "binary-tree", "loop"}, ""))
+	pattern_APIService_GetTriangleWithNonLoop_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"api", "binary-tree", "without-loop"}, ""))
+	pattern_APIService_CatchMeIfYouCan_0        = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"api", "catch-me"}, ""))
+	pattern_APIService_GetSummary_0             = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"api", "summary"}, ""))
 )
 
 var (
