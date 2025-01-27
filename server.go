@@ -63,7 +63,7 @@ func (s *APIServer) GetTriangleWithNonLoop(ctx context.Context, req *api.Triangl
     return &api.TriangleResponse{Sum: int32(sum)}, nil
 }
 
-func (s *APIServer) catchMeIfYouCan(ctx context.Context, req *api.CatchMeRequest) (*api.CatchMeResponse, error) {
+func (s *APIServer) CatchMeIfYouCan(ctx context.Context, req *api.CatchMeRequest) (*api.CatchMeResponse, error) {
     // Extract the single input string
     input := req.Input
 

@@ -18,7 +18,7 @@ or
 - step 1 
 protoc --go_out=. --go-grpc_out=. --proto_path=. api.proto
 - step 2 
-- protoc --grpc-gateway_out=. --go_out=. --go-grpc_out=. --proto_path=. api.proto
+protoc --grpc-gateway_out=. --go_out=. --go-grpc_out=. --proto_path=. api.proto
 ```
 
 after than  you can run with this command
@@ -26,4 +26,5 @@ after than  you can run with this command
 ```cmd
 make start or go run server.go
 ```
+
 

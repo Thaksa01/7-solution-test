@@ -185,7 +185,7 @@ func RegisterAPIServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/api.APIService/GetSummary", runtime.WithHTTPPathPattern("/api/summary"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/api.APIService/GetSummary", runtime.WithHTTPPathPattern("/api/beef/summary"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -294,7 +294,7 @@ func RegisterAPIServiceHandlerClient(ctx context.Context, mux *runtime.ServeMux,
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/api.APIService/GetSummary", runtime.WithHTTPPathPattern("/api/summary"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/api.APIService/GetSummary", runtime.WithHTTPPathPattern("/api/beef/summary"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -314,7 +314,7 @@ var (
 	pattern_APIService_GetTriangleWithLoop_0    = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"api", "binary-tree", "loop"}, ""))
 	pattern_APIService_GetTriangleWithNonLoop_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"api", "binary-tree", "without-loop"}, ""))
 	pattern_APIService_CatchMeIfYouCan_0        = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"api", "catch-me"}, ""))
-	pattern_APIService_GetSummary_0             = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"api", "summary"}, ""))
+	pattern_APIService_GetSummary_0             = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"api", "beef", "summary"}, ""))
 )
 
 var (

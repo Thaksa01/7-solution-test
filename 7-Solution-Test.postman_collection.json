@@ -1,0 +1,315 @@
+{
+	"info": {
+		"_postman_id": "d79bf3ed-11e9-4805-bbd0-fecd8684bac4",
+		"name": "7-Solution-Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10147347"
+	},
+	"item": [
+		{
+			"name": "gRPC beef-summary",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/beef/summary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"beef",
+						"summary"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/summary",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"summary"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Grpc-Metadata-Content-Type",
+							"value": "application/grpc"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 27 Jan 2025 02:10:41 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1725"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"beef\": {\n        \"ad\": 25,\n        \"adipisicing\": 30,\n        \"alcatra\": 36,\n        \"aliqua\": 35,\n        \"aliquip\": 39,\n        \"andouille\": 28,\n        \"anim\": 35,\n        \"aute\": 34,\n        \"bacon\": 38,\n        \"ball\": 41,\n        \"beef\": 110,\n        \"belly\": 46,\n        \"biltong\": 37,\n        \"boudin\": 45,\n        \"bresaola\": 38,\n        \"brisket\": 33,\n        \"buffalo\": 37,\n        \"burgdoggen\": 33,\n        \"capicola\": 44,\n        \"chicken\": 45,\n        \"chislic\": 51,\n        \"chop\": 31,\n        \"chuck\": 33,\n        \"cillum\": 32,\n        \"commodo\": 45,\n        \"consectetur\": 32,\n        \"consequat\": 38,\n        \"corned\": 44,\n        \"cow\": 42,\n        \"culpa\": 33,\n        \"cupidatat\": 34,\n        \"cupim\": 35,\n        \"deserunt\": 34,\n        \"do\": 31,\n        \"dolor\": 32,\n        \"dolore\": 82,\n        \"doner\": 31,\n        \"drumstick\": 52,\n        \"duis\": 41,\n        \"ea\": 41,\n        \"eiusmod\": 47,\n        \"elit\": 43,\n        \"enim\": 36,\n        \"esse\": 33,\n        \"est\": 38,\n        \"et\": 42,\n        \"eu\": 27,\n        \"ex\": 39,\n        \"excepteur\": 29,\n        \"exercitation\": 43,\n        \"fatback\": 38,\n        \"filet\": 30,\n        \"flank\": 41,\n        \"frankfurter\": 35,\n        \"fugiat\": 52,\n        \"ground\": 36,\n        \"ham\": 82,\n        \"hamburger\": 40,\n        \"hock\": 40,\n        \"id\": 30,\n        \"in\": 98,\n        \"incididunt\": 34,\n        \"ipsum\": 45,\n        \"irure\": 29,\n        \"jerky\": 34,\n        \"jowl\": 49,\n        \"kevin\": 39,\n        \"kielbasa\": 36,\n        \"labore\": 38,\n        \"laboris\": 34,\n        \"laborum\": 45,\n        \"landjaeger\": 34,\n        \"leberkas\": 40,\n        \"loin\": 64,\n        \"lorem\": 38,\n        \"magna\": 37,\n        \"meatball\": 40,\n        \"meatloaf\": 48,\n        \"mignon\": 30,\n        \"minim\": 38,\n        \"mollit\": 41,\n        \"nisi\": 23,\n        \"non\": 29,\n        \"nostrud\": 34,\n        \"nulla\": 45,\n        \"occaecat\": 36,\n        \"officia\": 36,\n        \"pancetta\": 40,\n        \"pariatur\": 30,\n        \"pastrami\": 40,\n        \"picanha\": 45,\n        \"pig\": 42,\n        \"porchetta\": 25,\n        \"pork\": 146,\n        \"proident\": 40,\n        \"prosciutto\": 45,\n        \"qui\": 46,\n        \"quis\": 24,\n        \"reprehenderit\": 33,\n        \"ribeye\": 44,\n        \"ribs\": 108,\n        \"round\": 36,\n        \"rump\": 35,\n        \"salami\": 36,\n        \"sausage\": 32,\n        \"sed\": 42,\n        \"shank\": 34,\n        \"shankle\": 38,\n        \"short\": 73,\n        \"shoulder\": 35,\n        \"sint\": 42,\n        \"sirloin\": 31,\n        \"spare\": 33,\n        \"steak\": 32,\n        \"strip\": 32,\n        \"sunt\": 36,\n        \"swine\": 38,\n        \"t-bone\": 37,\n        \"tail\": 42,\n        \"tempor\": 41,\n        \"tenderloin\": 26,\n        \"tip\": 41,\n        \"tongue\": 38,\n        \"tri-tip\": 40,\n        \"turducken\": 30,\n        \"turkey\": 41,\n        \"ullamco\": 37,\n        \"ut\": 96,\n        \"velit\": 32,\n        \"veniam\": 35,\n        \"venison\": 30,\n        \"voluptate\": 42\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "gRPC triangle-loop",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/binary-tree/loop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"binary-tree",
+						"loop"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/triangle/loop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"triangle",
+								"loop"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Grpc-Metadata-Content-Type",
+							"value": "application/grpc"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 27 Jan 2025 02:10:30 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "12"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"sum\": 7273\n}"
+				}
+			]
+		},
+		{
+			"name": "gRPC triangle-non-loop",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/binary-tree/without-loop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"binary-tree",
+						"without-loop"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/triangle/loop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"triangle",
+								"loop"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Grpc-Metadata-Content-Type",
+							"value": "application/grpc"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 27 Jan 2025 02:10:30 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "12"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"sum\": 7273\n}"
+				}
+			]
+		},
+		{
+			"name": "gRPC catch-me",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"input\": \"LLRR=\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/catch-me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"catch-me"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"input\": \"LLRR=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/catch-me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"catch-me"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Grpc-Metadata-Content-Type",
+							"value": "application/grpc"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 27 Jan 2025 02:37:39 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"output\": \"[2 1 0 1 2 2]\"\n}"
+				}
+			]
+		}
+	]
+}

@@ -38,7 +38,7 @@ service APIService {
   };
   }
 
-  rpc catchMeIfYouCan(CatchMeRequest) returns (CatchMeResponse) {
+  rpc CatchMeIfYouCan(CatchMeRequest) returns (CatchMeResponse) {
     option (google.api.http) = {
       post: "/api/catch-me"
       body: "*"
@@ -47,7 +47,7 @@ service APIService {
 
   rpc GetSummary(SummaryRequest) returns (SummaryResponse) {
     option (google.api.http) = {
-      get: "/api/summary"
+      get: "/api/beef/summary"
     };
   }
 }
